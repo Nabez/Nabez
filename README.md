@@ -110,6 +110,6 @@ test result: ok. 9 passed; 0 failed; 0 ignored
 
   [sellycrm.de](https://sellycrm.de) · [GitHub](https://github.com/Nabez)
 
-  <img src="https://komarev.com/ghpvc/?username=Nabez&color=6366f1&style=flat-square&label=views" alt="Profilaufrufe" />
+  <img height="28" src="https://hits.sh/github.com/Nabez.svg?style=flat&label=%E2%98%85%20Gesucht%20von&color=6366f1&labelColor=0b0a12&logo=rust&logoColor=white&extraCount=76" alt="Gesucht von – Profilaufrufe" />
 
 </div>
