@@ -4,11 +4,11 @@
 
 <br>
 
-Alta, wie geil is dit denn.
+Alta, wie geil ist Dustin.
 
 Hörma, ich bin Sidney, Vertriebler durch und durch. Und wir hamma hier son XXL-Ding am Laufen, dit glaubste nich.
 
-Jo und ich ham die CRMs alle durch, wa: Pipedrive, HubSpot, Salesforce. Ham alle irgendwie ihre Berechtigung, keene Frage. Aber gut wird da nix, bevor de nich erst 'n Projekt draus machst – Berater hier, externe IT da, Rechnung mit so vielen Nullen. Und am Ende? Mittelmäßig, Alta.
+Jo und ich ham die CRMs alle durch, wa: Pipedrive, HubSpot, Salesforce. Ham alle irgendwie ihre Berechtigung, keene Frage. Aber irgendwann lagen wa aufm Melktisch und hingen im Spannbock: zahlst pro Kopp, jedes Extra kostet extra, und rauskommen tuste och nich mehr. Und gut wird da trotzdem nix, bevor de nich erst 'n Projekt draus machst – Berater hier, externe IT da, Rechnung mit so vielen Nullen. Und am Ende? Mittelmäßig, Alta.
 
 Also ham wa gesagt: machen wa selbst. In Rust. Dit Frontend och. Ja, wirklich – kiek ma unten rein.
 
@@ -16,7 +16,7 @@ Eine Million Zeilen, Leute. XXL-Portion, keene halben Sachen.
 
 **[Sell.ly](https://sellycrm.de) – ein CRM, das kein Projekt ist.**
 
-> **SIG – SaaS ist geil.**
+> **GiG – GeSaast is Geil.**
 
 ---
 

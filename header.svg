@@ -72,7 +72,7 @@
   <text class="w z z4" x="30" y="149" font-size="14">Make Software as a Service great again.</text>
 
   <text class="a z z5" x="30" y="186" font-size="14">$ cargo run --release -p selly-server</text>
-  <text class="d z z6" x="30" y="208" font-size="14">SIG – SaaS ist geil.</text>
+  <text class="d z z6" x="30" y="208" font-size="14">GiG – GeSaast is Geil.</text>
 
   <g class="z z7">
     <text class="a" x="30" y="230" font-size="14">$</text>
