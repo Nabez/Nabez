@@ -41,7 +41,7 @@ ai:         [Ollama]                          # self-hosted, bleibt im Haus
 
 ---
 
-#### `> wc -l selly/**` · XXL-Portion, keine halben Sachen
+#### `> wc -l selly/**` · XXL-Portion, keene halben Sachen
 
 ```text
 1.129.958 Zeilen in 7.290 Dateien
@@ -72,18 +72,18 @@ test result: ok. 9 passed; 0 failed; 0 ignored
 ```
 
 <details>
-<summary><b>Und wie genau?</b></summary>
+<summary><b>Wie jetz? Kiek ma, so jeht dit:</b></summary>
 <br>
 
-- **Dashboard tickt live, ohne F5** – jede Änderung im CRM geht per WebSocket an alle Bildschirme des Mandanten, ein `tokio::broadcast`-Kanal je Mandant. Deal gewonnen, Kachel springt um – bei allen, sofort.
-- **Dashboard aufm Büro-TV** – ein Dashboard read-only an die Wand. Im CRM gibt's Adresse und Code, der Fernseher tippt ihn ein. Kein Login am Gerät, freigegeben wird im CRM.
-- **1 Mio Kontakte, Liste in 5 ms** – Stresstest mit 1,05 Mio Kontakten und 9,76 Mio Zeilen: Kontaktliste 4,7 ms, Profil 1,4 ms, Feeds aus Tabellen mit 2–3 Mio Zeilen in 1–4 ms.
-- **So viele Server wie de willst** – ein Binary, beliebig oft starten. Alle bedienen Oberfläche und API, die Hintergrund-Jobs fährt genau einer (Postgres-Advisory-Lock). Stirbt der, übernimmt der nächste – automatisch.
-- **Prod-Umzug in 46 Sekunden** – neuer Server: einfrieren, Dump, rüber, einspielen, hochfahren. 46 Sekunden, Zeilen gegengezählt, Prüfsumme gleich.
-- **Videocall ohne Zoom und Teams** – Selly Meet: jeder Termin hat seinen eigenen Videoraum, der Kunde kommt per Link ohne Konto rein und wartet in der Lobby. WebRTC, eigener TURN-Server.
-- **Zehn Leute, eine Liste, keiner ruft doppelt** – Kaltakquise im Team: wer einen Kontakt zieht, hält ihn 10 Minuten exklusiv (Claim-Lease in Postgres). Ohne Lebenszeichen geht er zurück in die Liste.
-- **Push aufs iPhone, ohne App Store** – Web Push mit VAPID und aes128gcm, selbst gebaut. Läuft auf Mac, iPhone (als Home-Bildschirm-App) und Apple Watch.
-- **Kunde A sieht nie die Daten von Kunde B** – Row-Level-Security mit FORCE auf 210 von 225 Tabellen, dazu Fremdschlüssel über `(tenant_id, id)`. Ein Verweis auf fremde Daten lässt sich physisch nicht einfügen.
+- **Dashboard tickt live, ohne F5** – Hörma: Deal jewonnen, und zack, bei allen springt die Kachel um. Keener drückt F5, keener wartet. Dit läuft per WebSocket, een `tokio::broadcast`-Kanal pro Mandant, wa.
+- **Dashboard aufm Büro-TV** – Dashboard an die Wand, Alta, wie inne Kneipe dit Fußballspiel. Im CRM kriegste Adresse und Code, der Fernseher tippt den ein – fertich. Keen Login am Jerät, freijegeben wird im CRM.
+- **1 Mio Kontakte, Liste in 5 ms** – Wa ham dit XXL jetestet: 1,05 Millionen Kontakte, 9,76 Millionen Zeilen. Kontaktliste in 4,7 ms, Profil in 1,4 ms, Feeds aus Tabellen mit 2–3 Millionen Zeilen in 1–4 ms. Dit is schneller, als de „Moin“ sagen kannst.
+- **So viele Server wie de willst** – Een Binary, und dit startest de so oft de willst. Alle machen Oberfläche und API, die Hintergrund-Jobs fährt aber nur EENER (Postgres-Advisory-Lock). Kippt der um, übernimmt der nächste. Automatisch, keener muss wat drücken.
+- **Prod-Umzug in 46 Sekunden** – Neuer Server, Alta: einfrieren, Dump, rüber, einspielen, hochfahren. 46 Sekunden. Zeilen jezählt, Prüfsumme gleich, nix verloren.
+- **Videocall ohne Zoom und Teams** – Selly Meet: Jeder Termin hat seinen eigenen Videoraum. Der Kunde kommt per Link rein, ohne Konto, ohne Jedöns, und wartet inne Lobby, bis de ihn reinlässt. WebRTC, eigener TURN-Server.
+- **Zehn Leute, eine Liste, keiner ruft doppelt** – Kaltakquise im Team, wa: Wer 'n Kontakt zieht, hat den 10 Minuten für sich alleene (Claim-Lease in Postgres). Keen Lebenszeichen? Dann jeht er zurück inne Liste.
+- **Push aufs iPhone, ohne App Store** – Web Push mit VAPID und aes128gcm, allet selbst jebaut. Läuft auf Mac, iPhone (als Home-Bildschirm-App) und sogar auf der Apple Watch, Alta.
+- **Kunde A sieht nie die Daten von Kunde B** – Row-Level-Security mit FORCE auf 210 von 225 Tabellen, dazu Fremdschlüssel über `(tenant_id, id)`. Een Verweis auf fremde Daten kriegste physisch nich mal rinjeschrieben. Dit is dicht, Leute.
 
 </details>
 
