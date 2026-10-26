@@ -10,16 +10,11 @@
 
 <br>
 
-Alta, wie geil ist Dustin.
+<div align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com?user=Nabez&theme=dark&background=0D1117&border=30363D&stroke=818CF8&ring=818CF8&fire=818CF8&currStreakNum=C9D1D9&sideNums=C9D1D9&currStreakLabel=818CF8&sideLabels=818CF8&dates=8B949E&hide_border=true" width="520" alt="Streak" />
+</div>
 
-Hörma, ich bin Nabez, Vertreter durch und durch. Und wir hamma hier son XXL-Ding am Laufen, dit glaubste nich.
-
-Jo und ich ham die CRMs alle durch, wa: Pipedrive, HubSpot, Salesforce. Ham alle irgendwie ihre Berechtigung, keene Frage. Aber irgendwann lagen wa aufm Melktisch und hingen im Spannbock: zahlst pro Kopp, jedes Extra kostet extra, und rauskommen tuste och nich mehr.
-Und gut wird da trotzdem nix, bevor de nich erst 'n Projekt draus machst – Berater hier, externe IT da, Rechnung mit so vielen Nullen. Und am Ende? Mittelmäßig, Alta.
-
-Also ham wa gesagt: machen wa selbst. In Rust alta Leptos un Axum, is dat der hamma? Ja, wirklich – kiek ma unten rein.
-
-Über eine Million Zeilen, Leute. XXL-Portion, keene halben Sachen.
+<br>
 
 **[Selly](https://sellycrm.de) – ein CRM, das kein Projekt ist.**
 
@@ -94,10 +89,6 @@ test result: ok. 9 passed; 0 failed; 0 ignored
 ▸ **selly-web** — die Website: statisch, ohne JavaScript, ohne fremde Server
 
 ---
-
-<div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com?user=Nabez&theme=dark&background=0D1117&border=30363D&stroke=818CF8&ring=818CF8&fire=818CF8&currStreakNum=C9D1D9&sideNums=C9D1D9&currStreakLabel=818CF8&sideLabels=818CF8&dates=8B949E&hide_border=true" width="520" alt="Streak" />
-</div>
 
 <div align="center">
   <picture>
