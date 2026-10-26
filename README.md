@@ -33,10 +33,10 @@
 # ~/.config/nabez/stack.yml
 
 languages:  [Rust, SQL, TypeScript, CSS]
-frontend:   [Leptos, WebAssembly]             # average enjoyer
+frontend:   [Leptos, WebAssembly]             # average enjoyer, wa
 backend:    [Axum, tokio, sqlx, PostgreSQL]
-infra:      [Server in DE, Docker, Caddy, GitHub Actions]
-ai:         [Ollama]                          # self-hosted, bleibt im Haus
+infra:      [Server in DE, Docker, Caddy, GitHub Actions]   # allet in Deutschland, Alta
+ai:         [Ollama]                          # selbst jehostet, bleibt im Haus
 ```
 
 ---
@@ -91,9 +91,9 @@ test result: ok. 9 passed; 0 failed; 0 ignored
 
 #### `> ls Selly-CRM/`
 
-▸ **selly** — das Produkt: Multi-Tenant-CRM, ein Binary, 45 Crates · [sellycrm.de](https://sellycrm.de)
+▸ **selly** — dit Produkt: Multi-Tenant-CRM, een Binary, 45 Crates · [sellycrm.de](https://sellycrm.de)
 
-▸ **selly-web** — die Website: statisch, ohne JavaScript, ohne fremde Server
+▸ **selly-web** — die Website: statisch, keen JavaScript, keene fremden Server
 
 ---
 
