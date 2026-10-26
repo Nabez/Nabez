@@ -9,15 +9,15 @@
       .bar{fill:#161b22}
       .dr{fill:#ff5f57}.dy{fill:#febc2e}.dg{fill:#28c840}
       .tt{fill:#8b949e;font-family:'Courier New',Consolas,monospace;font-size:12px}
-      .a{fill:#ef4b62;font-family:'Courier New',Consolas,monospace}
+      .a{fill:#818cf8;font-family:'Courier New',Consolas,monospace}
       .w{fill:#c9d1d9;font-family:'Courier New',Consolas,monospace}
       .d{fill:#6e7681;font-family:'Courier New',Consolas,monospace}
-      .cur{fill:#ef4b62;animation:blink 1s step-end infinite}
+      .cur{fill:#6366f1;animation:blink 1s step-end infinite}
       .gl{animation:glow 3s ease-in-out infinite}
       .z{opacity:0;animation:ein .35s ease-out forwards}
       .z1{animation-delay:.2s}.z2{animation-delay:.7s}.z3{animation-delay:1.3s}
       .z4{animation-delay:1.8s}.z5{animation-delay:2.4s}.z6{animation-delay:3.0s}.z7{animation-delay:3.4s}
-      .r{font-family:monospace;font-size:13px;fill:#ef4b62;opacity:0}
+      .r{font-family:monospace;font-size:13px;fill:#6366f1;opacity:0}
       .f1{animation:fall 3.8s linear infinite}
       .f2{animation:fall 4.6s linear infinite;animation-delay:.4s}
       .f3{animation:fall 3.2s linear infinite;animation-delay:.9s}
@@ -43,7 +43,7 @@
   <circle class="dr" cx="22" cy="17" r="6"/>
   <circle class="dy" cx="44" cy="17" r="6"/>
   <circle class="dg" cx="66" cy="17" r="6"/>
-  <text class="tt" x="425" y="21" text-anchor="middle">sidney@selly: ~</text>
+  <text class="tt" x="425" y="21" text-anchor="middle">nabez@selly: ~</text>
 
   <text class="r f1" x="40" y="-5">{</text>
   <text class="r f2" x="105" y="-5">€</text>
@@ -64,15 +64,15 @@
 
   <text class="a z z1" x="30" y="66" font-size="14">$ whoami</text>
   <g class="z z2">
-    <text class="w gl" x="30" y="89" font-size="15" font-weight="bold">Sidney</text>
-    <text class="d" x="104" y="89" font-size="14">— Vertrieb · Gründer von Sell.ly · baut in Rust</text>
+    <text class="w gl" x="30" y="89" font-size="15" font-weight="bold">Nabez</text>
+    <text class="d" x="96" y="89" font-size="14">— Sales Manager &amp; average Leptos Enjoyer</text>
   </g>
 
   <text class="a z z3" x="30" y="126" font-size="14">$ cat mission.txt</text>
-  <text class="w z z4" x="30" y="149" font-size="14">Ein CRM von Seller für Seller. Eins, das kein Projekt ist.</text>
+  <text class="w z z4" x="30" y="149" font-size="14">Make Software as a Service great again.</text>
 
   <text class="a z z5" x="30" y="186" font-size="14">$ cargo run --release -p selly-server</text>
-  <text class="d z z6" x="30" y="208" font-size="14">Sell.ly läuft.</text>
+  <text class="d z z6" x="30" y="208" font-size="14">SIG – SaaS ist geil.</text>
 
   <g class="z z7">
     <text class="a" x="30" y="230" font-size="14">$</text>
