@@ -35,7 +35,7 @@
 languages:  [Rust, SQL, TypeScript, CSS]
 frontend:   [Leptos, WebAssembly]             # average enjoyer, wa
 backend:    [Axum, tokio, sqlx, PostgreSQL]
-infra:      [Server in DE, Docker, Caddy, GitHub Actions]   # allet in Deutschland, Alta
+infra:      [Server in DE, Docker, Caddy, GitHub Actions]
 ai:         [Ollama]                          # selbst jehostet, bleibt im Haus
 ```
 
