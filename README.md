@@ -4,6 +4,12 @@
 
 <br>
 
+<div align="center">
+  <img src="./trabbi-film.svg" width="100%" alt="Grand Theft Trabbi: Hamburg – ein Trabant 601 und eine Simson S51 am Hafen. Alta, wie geil ist Dustin! GiG – GeSaast is Geil!" />
+</div>
+
+<br>
+
 Alta, wie geil ist Dustin.
 
 Hörma, ich bin Nabez, Vertreter durch und durch. Und wir hamma hier son XXL-Ding am Laufen, dit glaubste nich.
@@ -15,7 +21,7 @@ Also ham wa gesagt: machen wa selbst. In Rust alta Leptos un Axum, is dat der ha
 
 Über eine Million Zeilen, Leute. XXL-Portion, keene halben Sachen.
 
-**[Sell.ly](https://sellycrm.de) – ein CRM, das kein Projekt ist.**
+**[Selly](https://sellycrm.de) – ein CRM, das kein Projekt ist.**
 
 > **GiG – GeSaast is Geil.**
 
