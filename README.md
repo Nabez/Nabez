@@ -6,13 +6,14 @@
 
 Alta, wie geil ist Dustin.
 
-Hörma, ich bin Sidney, Vertriebler durch und durch. Und wir hamma hier son XXL-Ding am Laufen, dit glaubste nich.
+Hörma, ich bin Nabez, Vertreter durch und durch. Und wir hamma hier son XXL-Ding am Laufen, dit glaubste nich.
 
-Jo und ich ham die CRMs alle durch, wa: Pipedrive, HubSpot, Salesforce. Ham alle irgendwie ihre Berechtigung, keene Frage. Aber irgendwann lagen wa aufm Melktisch und hingen im Spannbock: zahlst pro Kopp, jedes Extra kostet extra, und rauskommen tuste och nich mehr. Und gut wird da trotzdem nix, bevor de nich erst 'n Projekt draus machst – Berater hier, externe IT da, Rechnung mit so vielen Nullen. Und am Ende? Mittelmäßig, Alta.
+Jo und ich ham die CRMs alle durch, wa: Pipedrive, HubSpot, Salesforce. Ham alle irgendwie ihre Berechtigung, keene Frage. Aber irgendwann lagen wa aufm Melktisch und hingen im Spannbock: zahlst pro Kopp, jedes Extra kostet extra, und rauskommen tuste och nich mehr.
+Und gut wird da trotzdem nix, bevor de nich erst 'n Projekt draus machst – Berater hier, externe IT da, Rechnung mit so vielen Nullen. Und am Ende? Mittelmäßig, Alta.
 
-Also ham wa gesagt: machen wa selbst. In Rust. Dit Frontend och. Ja, wirklich – kiek ma unten rein.
+Also ham wa gesagt: machen wa selbst. In Rust alta Leptos un Axum, is dat der hamma? Ja, wirklich – kiek ma unten rein.
 
-Eine Million Zeilen, Leute. XXL-Portion, keene halben Sachen.
+Über eine Million Zeilen, Leute. XXL-Portion, keene halben Sachen.
 
 **[Sell.ly](https://sellycrm.de) – ein CRM, das kein Projekt ist.**
 
@@ -26,7 +27,7 @@ Eine Million Zeilen, Leute. XXL-Portion, keene halben Sachen.
 languages:  [Rust, SQL, TypeScript, CSS]
 frontend:   [Leptos, WebAssembly]             # average enjoyer
 backend:    [Axum, tokio, sqlx, PostgreSQL]
-infra:      [Hetzner, Docker, Caddy, GitHub Actions]
+infra:      [Server in DE, Docker, Caddy, GitHub Actions]
 ai:         [Ollama]                          # self-hosted, bleibt im Haus
 ```
 
@@ -48,29 +49,33 @@ SQL           24.118     269 Dateien   █░░░░░░░░░░░░�
 #### `> cargo test echte_probleme`
 
 ```text
-running 7 tests
+running 9 tests
+test dashboard_tickt_live_ohne_f5 .................. ok
+test dashboard_laeuft_aufm_buero_tv ................ ok
+test eine_million_kontakte_liste_in_5_ms ........... ok
+test so_viele_server_wie_de_willst ................. ok
+test prod_umzug_in_46_sekunden ..................... ok
+test videocall_ohne_zoom_und_teams ................. ok
+test zehn_leute_eine_liste_keiner_ruft_doppelt ..... ok
+test push_aufs_iphone_ohne_app_store ............... ok
 test kunde_a_sieht_nie_die_daten_von_kunde_b ....... ok
-test kein_cent_geht_verloren ....................... ok
-test jede_automation_laeuft_genau_einmal ........... ok
-test das_audit_log_luegt_nicht ..................... ok
-test ki_ohne_datenabfluss .......................... ok
-test ui_ohne_javascript_framework .................. ok
-test vier_telefonanlagen_ein_stecker ............... ok
 
-test result: ok. 7 passed; 0 failed; 0 ignored
+test result: ok. 9 passed; 0 failed; 0 ignored
 ```
 
 <details>
 <summary><b>Und wie genau?</b></summary>
 <br>
 
+- **Dashboard tickt live, ohne F5** – jede Änderung im CRM geht per WebSocket an alle Bildschirme des Mandanten, ein `tokio::broadcast`-Kanal je Mandant. Deal gewonnen, Kachel springt um – bei allen, sofort.
+- **Dashboard aufm Büro-TV** – ein Dashboard read-only an die Wand. Im CRM gibt's Adresse und Code, der Fernseher tippt ihn ein. Kein Login am Gerät, freigegeben wird im CRM.
+- **1 Mio Kontakte, Liste in 5 ms** – Stresstest mit 1,05 Mio Kontakten und 9,76 Mio Zeilen: Kontaktliste 4,7 ms, Profil 1,4 ms, Feeds aus Tabellen mit 2–3 Mio Zeilen in 1–4 ms.
+- **So viele Server wie de willst** – ein Binary, beliebig oft starten. Alle bedienen Oberfläche und API, die Hintergrund-Jobs fährt genau einer (Postgres-Advisory-Lock). Stirbt der, übernimmt der nächste – automatisch.
+- **Prod-Umzug in 46 Sekunden** – neuer Server: einfrieren, Dump, rüber, einspielen, hochfahren. 46 Sekunden, Zeilen gegengezählt, Prüfsumme gleich.
+- **Videocall ohne Zoom und Teams** – Selly Meet: jeder Termin hat seinen eigenen Videoraum, der Kunde kommt per Link ohne Konto rein und wartet in der Lobby. WebRTC, eigener TURN-Server.
+- **Zehn Leute, eine Liste, keiner ruft doppelt** – Kaltakquise im Team: wer einen Kontakt zieht, hält ihn 10 Minuten exklusiv (Claim-Lease in Postgres). Ohne Lebenszeichen geht er zurück in die Liste.
+- **Push aufs iPhone, ohne App Store** – Web Push mit VAPID und aes128gcm, selbst gebaut. Läuft auf Mac, iPhone (als Home-Bildschirm-App) und Apple Watch.
 - **Kunde A sieht nie die Daten von Kunde B** – Row-Level-Security mit FORCE auf 210 von 225 Tabellen, dazu Fremdschlüssel über `(tenant_id, id)`. Ein Verweis auf fremde Daten lässt sich physisch nicht einfügen.
-- **Kein Cent geht verloren** – Geld ist ein eigener Typ auf `rust_decimal`, in Postgres `NUMERIC(14,2)`. `f64` für Beträge gibt's nicht.
-- **Jede Automation läuft genau einmal** – alles in einem Binary, Hintergrund-Jobs inklusive. Laufen zwei Server, entscheidet ein Postgres-Advisory-Lock, wer führt.
-- **Das Audit-Log lügt nicht** – jeder Eintrag ist `SHA-256(Vorgänger-Hash ‖ Inhalt)`. Wer nachträglich eine Zeile ändert, bricht die Kette.
-- **KI ohne Datenabfluss** – nur Ollama, selbst gehostet. Kein Kundendatensatz geht an OpenAI & Co.
-- **UI ohne JavaScript-Framework** – 325.000 Zeilen Leptos, kompiliert zu WebAssembly. Kein React, kein Vue, eine Sprache von der Datenbank bis zum Button.
-- **Vier Telefonanlagen, ein Stecker** – sipgate, Twilio, Placetel und 3CX hinter einem Port. Die Adapter bauen nur Daten, gesendet wird an einer Stelle – testbar ohne ein einziges Netzpaket.
 
 </details>
 
