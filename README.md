@@ -11,7 +11,7 @@
 <br>
 
 <div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com?user=Nabez&theme=dark&background=0D1117&border=30363D&stroke=818CF8&ring=818CF8&fire=818CF8&currStreakNum=C9D1D9&sideNums=C9D1D9&currStreakLabel=818CF8&sideLabels=818CF8&dates=8B949E&hide_border=true" width="520" alt="Streak" />
+  <img src="https://raw.githubusercontent.com/Nabez/Nabez/output/streak.svg" width="520" alt="Beiträge gesamt, Tage am Stück, längste Serie" />
 </div>
 
 <div align="center">

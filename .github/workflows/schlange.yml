@@ -1,10 +1,16 @@
-name: Schlange
+name: Profil-Grafiken
 
-# Zeichnet das Beitragsraster des letzten Jahres als Schlange und legt die
-# beiden SVGs auf den Zweig `output`, von dem das README sie lädt.
+# Zeichnet stündlich die Beitrags-Schlange und die Streak-Karte und legt beide
+# auf den Zweig `output`, von dem das README sie lädt. Beide in EINEM Lauf:
+# ghaction-github-pages ersetzt den Zweig jedes Mal komplett — ein zweiter
+# Workflow würde die Dateien des ersten löschen.
+#
+# Stündlich, weil der öffentliche Streak-Dienst bis zu einem Tag hinterherhing
+# (eigener Server-Cache + max-age=86400). raw.githubusercontent.com liefert mit
+# max-age=300 aus, die Karte ist damit höchstens gut eine Stunde alt.
 on:
   schedule:
-    - cron: "17 3 * * *"
+    - cron: "7 * * * *"
   workflow_dispatch:
   push:
     branches: [main]
@@ -13,16 +19,23 @@ permissions:
   contents: write
 
 jobs:
-  schlange:
+  grafiken:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
+      - uses: actions/checkout@v4
+
       - uses: Platane/snk@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
             dist/schlange.svg?palette=github-light&color_snake=#4f46e5&color_dots=#ebedf0,#c7d2fe,#a5b4fc,#6366f1,#4338ca
             dist/schlange-dunkel.svg?palette=github-dark&color_snake=#818cf8&color_dots=#161b22,#1e1b4b,#312e81,#4f46e5,#818cf8
+
+      - name: Streak-Karte
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 .github/scripts/streak.py "${{ github.repository_owner }}" dist/streak.svg
 
       - uses: crazy-max/ghaction-github-pages@v4
         with:
