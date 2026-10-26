@@ -25,17 +25,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # Vor der Schlange: snk läuft als Docker-Container mit root und legte
+      # dist/ sonst als root an — dann darf dieser Schritt nicht hineinschreiben.
+      - name: Streak-Karte
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 .github/scripts/streak.py "${{ github.repository_owner }}" dist/streak.svg
+
       - uses: Platane/snk@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
             dist/schlange.svg?palette=github-light&color_snake=#4f46e5&color_dots=#ebedf0,#c7d2fe,#a5b4fc,#6366f1,#4338ca
             dist/schlange-dunkel.svg?palette=github-dark&color_snake=#818cf8&color_dots=#161b22,#1e1b4b,#312e81,#4f46e5,#818cf8
-
-      - name: Streak-Karte
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python3 .github/scripts/streak.py "${{ github.repository_owner }}" dist/streak.svg
 
       - uses: crazy-max/ghaction-github-pages@v4
         with:
