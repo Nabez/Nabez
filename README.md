@@ -4,15 +4,19 @@
 
 <br>
 
-Moin, ich bin Sidney. Vertriebler durch und durch.
+Alta, wie geil is dit denn.
 
-Jo und ich haben die CRMs alle durch: Pipedrive, HubSpot, Salesforce. Haben alle irgendwie ihre Berechtigung. Aber gut wird keins, ohne dass erst ein Projekt draus wird – Berater, externe IT, Rechnung mit vielen Nullen. Und am Ende ist es trotzdem mittelmäßig.
+Hörma, ich bin Sidney, Vertriebler durch und durch. Und wir hamma hier son XXL-Ding am Laufen, dit glaubste nich.
 
-Also bauen wir's selbst. In Rust. Das Frontend auch. Ja, wirklich.
+Jo und ich ham die CRMs alle durch, wa: Pipedrive, HubSpot, Salesforce. Ham alle irgendwie ihre Berechtigung, keene Frage. Aber gut wird da nix, bevor de nich erst 'n Projekt draus machst – Berater hier, externe IT da, Rechnung mit so vielen Nullen. Und am Ende? Mittelmäßig, Alta.
+
+Also ham wa gesagt: machen wa selbst. In Rust. Dit Frontend och. Ja, wirklich – kiek ma unten rein.
+
+Eine Million Zeilen, Leute. XXL-Portion, keene halben Sachen.
 
 **[Sell.ly](https://sellycrm.de) – ein CRM, das kein Projekt ist.**
 
-> **SIG – SaaS ist geil.** Man muss es nur richtig machen.
+> **SIG – SaaS ist geil.**
 
 ---
 
