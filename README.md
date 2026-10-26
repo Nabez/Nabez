@@ -44,14 +44,23 @@ ai:         [Ollama]                          # selbst jehostet, bleibt im Haus
 #### `> wc -l selly/**` · XXL-Portion, keene halben Sachen
 
 ```text
-1.129.958 Zeilen in 7.290 Dateien
+1.141.826 Zeilen in 7.456 Dateien                                      davon Tests
 
-Rust         916.437   5.801 Dateien   ████████████████████████░░░░░░  81 %
-CSS           72.579     473 Dateien   ██░░░░░░░░░░░░░░░░░░░░░░░░░░░░   6 %
-TypeScript    50.451     337 Dateien   █░░░░░░░░░░░░░░░░░░░░░░░░░░░░░   4 %
-SQL           24.118     269 Dateien   █░░░░░░░░░░░░░░░░░░░░░░░░░░░░░   2 %
-──────────────────────────────────────────────────────────────────────
-10.453 Tests · 294 E2E-Specs · 261 Migrationen · 45 Crates · 1 Binary
+Rust                         926.998  ████████████████░░░░  81 %          337.800
+├─ Axum-API & Worker         433.192  ████████░░░░░░░░░░░░  38 %          256.580
+├─ Leptos-Frontend           369.061  ██████░░░░░░░░░░░░░░  32 %           44.193
+├─ Fachlogik, 25 Services     63.472  █░░░░░░░░░░░░░░░░░░░   6 %           11.440
+├─ Kern & Infrastruktur       54.043  █░░░░░░░░░░░░░░░░░░░   5 %           22.871
+└─ Server, CLI & Kleinkram     7.230  ░░░░░░░░░░░░░░░░░░░░   1 %            2.716
+CSS                           72.564  █░░░░░░░░░░░░░░░░░░░   6 %
+├─ Leptos-UI-Styles           68.840
+└─ Website                     3.724
+TypeScript (Playwright-E2E)   50.279  █░░░░░░░░░░░░░░░░░░░   4 %           50.279
+SQL (266 Migrationen)         24.794  ░░░░░░░░░░░░░░░░░░░░   2 %
+Doku, Config, Skripte         67.191  █░░░░░░░░░░░░░░░░░░░   6 %
+─────────────────────────────────────────────────────────────────────────────────
+Testcode: 388.079 Zeilen – een Drittel vom Janzen, wa.
+10.639 Tests · 293 E2E-Specs · 266 Migrationen · 45 Crates · 29 Leptos-Seiten · 1 Binary
 ```
 
 #### `> cargo test echte_probleme`
