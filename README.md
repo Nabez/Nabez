@@ -6,7 +6,7 @@
 
 Hi, ich bin Sidney.
 
-Vertriebler durch und durch. Zusammen mit [Jo](https://github.com/whyblamejo) baue ich **[Sell.ly](https://sellycrm.de)**: ein CRM von Seller für Seller, komplett in Rust.
+Vertriebler durch und durch. Zusammen mit Jo baue ich **[Sell.ly](https://sellycrm.de)**: ein CRM von Seller für Seller, komplett in Rust.
 
 Alle CRMs haben irgendwie ihre Berechtigung. Aber keins ist gut, ohne mega Kosten und Zeitaufwand, und selbst wenn man es über externe IT aufbessern lässt, bleibt es meistens mittelmäßig. Deswegen gibt es Sell.ly – ein CRM, das kein Projekt ist.
 
@@ -29,8 +29,6 @@ ai:         [Ollama]
 ▸ **selly** — das Produkt: Multi-Tenant-CRM, ein Binary, 45 Crates · [sellycrm.de](https://sellycrm.de)
 
 ▸ **selly-web** — die Website: statisch, ohne JavaScript, ohne fremde Server
-
-▸ **selly-ci-runner** — eigener CI-Runner mit Merge-Queue, ein PR nach dem anderen
 
 #### `> wc -l selly/`
 
