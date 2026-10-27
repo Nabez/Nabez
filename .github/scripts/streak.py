@@ -1,7 +1,7 @@
 """Streak-Karte fürs Profil, ohne Fremddienst.
 
 Der öffentliche Streak-Dienst cacht serverseitig und schickt max-age=86400 —
-die Karte lag am 26.10. sechs Beiträge hinter GitHub (2.867 statt 2.873).
+die Karte lag paar Beiträge hinter GitHub.
 Dieses Skript fragt den Beitragskalender direkt über die GraphQL-API ab
 (private Beiträge zählen mit, wenn das Profil sie zeigt) und schreibt ein SVG.
 
